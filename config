@@ -156,6 +156,7 @@ bar {
         status_command i3status
 }
 
+# Use media keys for volume toggles
 bindsym XF86AudioRaiseVolume exec amixer -q set Master 2dB+ unmute
 bindsym XF86AudioLowerVolume exec amixer -q set Master 2dB- unmute
 bindsym XF86AudioMute exec amixer -q -D pulse set Master toggle
@@ -164,6 +165,9 @@ bindsym XF86AudioMute exec amixer -q -D pulse set Master toggle
 bindsym XF86MonBrightnessUp exec xbacklight -inc 5 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 5 # decrease screen brightness
 
+# Disable tap to click
 exec --no-startup-id xinput set-prop 11 "Synaptics Tap Action" 0
+exec --no-startup-id xinput set-prop 11 "Synaptics Tap Time" 0
 
+# Start Network-Manager Applet
 exec nm-applet
