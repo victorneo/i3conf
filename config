@@ -166,8 +166,10 @@ bindsym XF86MonBrightnessUp exec xbacklight -inc 5 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 5 # decrease screen brightness
 
 # Disable tap to click
-exec --no-startup-id xinput set-prop 11 "Synaptics Tap Action" 0
-exec --no-startup-id xinput set-prop 11 "Synaptics Tap Time" 0
+#exec --no-startup-id xinput set-prop 11 "Synaptics Tap Action" 0
+#exec --no-startup-id xinput set-prop 11 "Synaptics Tap Time" 0
+exec --no-startup-id xinput set-prop "DLL0704:01 06CB:76AE Touchpad" "Synaptics Tap Action" 0
+exec --no-startup-id xinput set-prop "DLL0704:01 06CB:76AE Touchpad" "Synaptics Tap Time" 0
 
 # Start Network-Manager Applet
 exec nm-applet
